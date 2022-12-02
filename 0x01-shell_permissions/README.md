@@ -20,3 +20,6 @@ A script to add "execute" mode/permission to the owner of the file
 
 6-multiple_permissions
 A script to update file  permissions for the user, group and others
+
+7-everybody
+A script to add the execute permission for everyone to the file "hello"
