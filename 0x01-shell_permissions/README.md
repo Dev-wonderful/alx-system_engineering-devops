@@ -17,3 +17,6 @@ A script to create an empty file
 
 5-execute
 A script to add "execute" mode/permission to the owner of the file
+
+6-multiple_permissions
+A script to update file  permissions for the user, group and others
