@@ -8,3 +8,12 @@ The script would print out the current user logged in using the whoami command
 
 2-groups
 The script prints out all the groups the current user belongs to
+
+3-new_owner
+The script changes the ownership of a file to another user
+
+4-empty
+A script to create an empty file
+
+5-execute
+A script to add "execute" mode/permission to the owner of the file
