@@ -24,5 +24,8 @@ A script to update file  permissions for the user, group and others
 7-everybody
 A script to add the execute permission for everyone to the file "hello"
 
-8-james_bond
+8-James_Bond
 A script to set file permission so that only others can carry out all operations while user and group no operation
+
+9-John_Doe
+A script to update permission to the 753 fomat
