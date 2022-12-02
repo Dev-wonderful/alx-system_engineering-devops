@@ -46,4 +46,12 @@ A script to use another file as reference to imitate the file permissions of thi
 
 #### 11-directories_permissions
 
-A script to make all sub-directories executable but not the files by recursivelytraversing the parent folder
+A script to make all sub-directories executable but not the files by recursively traversing the parent folder
+
+#### 12-directory_permissions
+
+A script to create and set permission for a new directory at the same time
+
+#### 13-change_group
+
+A script to change the group owner of a file
