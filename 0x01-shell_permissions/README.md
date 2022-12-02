@@ -43,3 +43,7 @@ A script to update permission to the 753 format
 #### 10-mirror_permissions
 
 A script to use another file as reference to imitate the file permissions of this file for a file
+
+#### 11-directories_permissions
+
+A script to make all sub-directories executable but not the files by recursivelytraversing the parent folder
