@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $BETTY="School"
+echo "BETTY=School"
