@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# display 12 hours 59 mins in minute list
+hour=0
+minute=60
+while [[ "$hour" -le 12 ]]; do
+	if [[ "$minute" -eq 60 ]]; then
+		echo "Hour: $hour"
+		hour=$((hour + 1))
+		minute=1
+	else
+		echo "$minute"
+		minute=$((minute + 1))
+	fi
+done;
