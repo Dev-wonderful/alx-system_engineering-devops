@@ -2,7 +2,7 @@
 # display 12 hours 59 mins in minute list
 hour=0
 minute=60
-while [[ "$hour" -le 12 ]]; do
+while [[ "$hour" -ne 13 || "$minute" -ne 60 ]]; do
 	if [[ "$minute" -eq 60 ]]; then
 		echo "Hour: $hour"
 		hour=$((hour + 1))
