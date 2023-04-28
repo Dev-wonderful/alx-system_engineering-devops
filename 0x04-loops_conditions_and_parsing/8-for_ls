@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# list and modify file names
+for i in ls *; do
+	echo "$i"
+done
