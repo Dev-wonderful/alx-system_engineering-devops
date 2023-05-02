@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # list and modify file names
-for i in ls *; do
-	echo "$i"
+for i in *; do
+	echo "$i" | cut -f2- -d '-'
 done
