@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# connecting to my server using a different identity file
+chmod 0600 ~/.ssh/school
+ssh -i ~/.ssh/school ubuntu@54.160.79.143
