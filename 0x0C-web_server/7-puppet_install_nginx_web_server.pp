@@ -3,13 +3,13 @@
 # installing package
 exec {'update':
   provider => shell,
-  command  => 'sudo apt-get -y update',
+  command  => 'sudo apt -y update',
 }
 
 # install package
 exec {'install nginx':
   provider => shell,
-  command  => 'sudo apt-get -y nginx',
+  command  => 'sudo apt -y nginx',
 }
 
 # redirect permanently
