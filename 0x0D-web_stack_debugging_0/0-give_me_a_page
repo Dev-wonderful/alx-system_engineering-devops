@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# adding content to the default html page
+echo "Hello Holberton" > /var/www/html/index.html
