@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# install and configure a response page for nginx
+apt-get -y update
+apt-get -y install nginx
+echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+sed -i '/server_name _;/a \\n\trewrite ^\/redirectme \/ permanent;' /etc/nginx/sites-available/default
+service nginx start
