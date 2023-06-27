@@ -9,7 +9,7 @@ exec {'update':
 # install package
 exec {'install nginx':
   provider => shell,
-  command  => 'sudo apt -y nginx',
+  command  => 'sudo apt-get -y nginx',
 }
 
 # redirect permanently
