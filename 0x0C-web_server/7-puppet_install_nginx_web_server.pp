@@ -7,10 +7,9 @@ exec {'update':
 }
 
 # install package
-package {'nginx':
-  ensure          => 'installed',
-  provider        => 'apt',
-  install_options => '-y'
+exec {'install nginx':
+  command => 'sudo apt-get -y nginx',
+  path    => '/usr/bin:/bin'
 }
 
 # redirect permanently
@@ -20,11 +19,9 @@ exec {'redirect':
 }
 
 # Create default index file
-file {'index file':
-  ensure  => file,
-  path    => '/var/www/html/index.html',
-  mode    => '0644',
-  content => 'Hello World!'
+exec {'create index file':
+  command => 'echo "Hello World!" > /var/www/html/index.html',
+  path    => '/usr/bin:/bin'
 }
 
 # start nginx
