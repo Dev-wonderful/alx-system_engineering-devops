@@ -1,31 +1,31 @@
 # configure nginx in ubuntu server
 
 # installing package
-exec {'install and configure':
+exec {'update':
   provider => shell,
-  command  => 'sudo apt-get -y update; sudo apt-get -y nginx; echo "Hello World!" | sudo tee /var/www/html/index.html; sudo sed -i "/server_name _;/a \\n\trewrite ^\/redirect_me \/ permanent;" /etc/nginx/sites-available/default; sudo service nginx start'
+  command  => 'sudo apt-get -y update',
 }
 
 # install package
-# exec {'install nginx':
-#  provider => shell,
-#  command  => 'sudo apt-get -y nginx',
-# }
+exec {'install nginx':
+  provider => shell,
+  command  => 'sudo apt-get -y nginx',
+}
 
 # redirect permanently
-# exec {'redirect':
-#  provider => shell,
-#  command  => 'sudo sed -i "/server_name _;/a \\n\trewrite ^\/redirect_me \/ permanent;" /etc/nginx/sites-available/default',
-# }
+exec {'redirect':
+  provider => shell,
+  command  => 'sudo sed -i "/server_name _;/a \\n\trewrite ^\/redirect_me \/ permanent;" /etc/nginx/sites-available/default',
+}
 
 # Create default index file
-# exec {'create index file':
-#  provider => shell,
-#  command  => 'echo "Hello World!" | sudo tee /var/www/html/index.html',
-# }
+exec {'create index file':
+  provider => shell,
+  command  => 'echo "Hello World!" | sudo tee /var/www/html/index.html',
+}
 
 # start nginx
-# exec {'start':
-#  provider => shell,
-#  command  => 'sudo service nginx start',
-# }
+exec {'start':
+  provider => shell,
+  command  => 'sudo service nginx start',
+}
