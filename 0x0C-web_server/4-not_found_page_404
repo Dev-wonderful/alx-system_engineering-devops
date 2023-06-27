@@ -3,7 +3,7 @@
 apt-get -y update
 apt-get -y install nginx
 echo 'Hello World!' > /var/www/html/index.nginx-debian.html
-echo 'Hello World!' > /var/www/html/error404.html
+echo "Ceci n'est pas une page" > /var/www/html/error404.html
 sed -i '/server_name _;/a \\n\trewrite ^\/redirect_me \/ permanent;' /etc/nginx/sites-available/default
 sed -i '/server_name _;/a \\n\terror_page 404 \/error404.html;' /etc/nginx/sites-available/default
 service nginx start
