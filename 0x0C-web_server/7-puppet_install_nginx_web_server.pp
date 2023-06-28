@@ -10,7 +10,7 @@ exec {'update':
 exec {'install nginx':
   provider => shell,
   path     => '/usr/bin:/bin',
-  command  => 'apt-get -y nginx',
+  command  => 'apt-get -y install nginx',
 }
 
 # redirect permanently
