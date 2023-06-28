@@ -16,7 +16,7 @@ exec {'install nginx':
 # redirect permanently
 exec {'redirect':
   provider => shell,
-  command  => 'sudo sed -i "/server_name _;/a \\n\trewrite ^\/redirect_me \/ permanent;" /etc/nginx/sites-available/default',
+  command  => "sudo sed -i '/server_name _;/a \\\trewrite ^\/redirect_me \/ permanent;' /etc/nginx/sites-available/default",
 }
 
 # Create default index file
