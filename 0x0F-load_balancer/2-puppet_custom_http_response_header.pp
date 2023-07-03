@@ -2,7 +2,7 @@
 
 exec{'custom-header':
   provider => shell,
-  command  => "sudo sed -i '/server_name _;/a \\\n\tadd_header X-Served-By ${hostname};' /etc/nginx/sites-available/default",
+  command  => "sudo sed -i '/server_name _;/a \\\tadd_header X-Served-By ${hostname};' /etc/nginx/sites-available/default",
 }
 
 # restart nginx
