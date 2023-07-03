@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# adding response header
+apt-get -y update
+apt-get -y install nginx
+echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+sed -i "/server_name _;/a \\\n\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
+service nginx restart
