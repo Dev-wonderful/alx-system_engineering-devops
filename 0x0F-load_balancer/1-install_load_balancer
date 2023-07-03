@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # install and configure HAProxy
-apt-get install --no-install-recommends software-properties-common -y
-add-apt-repository ppa:vbernat/haproxy-2.4 -y
-apt-get -y install haproxy=2.4.\*
+# This is for ubuntu 16.04
+# apt-get install --no-install-recommends software-properties-common -y
+# add-apt-repository ppa:vbernat/haproxy-2.4 -y
+apt-get -y update
+apt-get -y install haproxy
 echo "Enabled=1" >> /etc/default/haproxy
 cp -a /etc/haproxy/haproxy.cfg{,.orig}
 cat << EOF >> /etc/haproxy/haproxy.cfg
