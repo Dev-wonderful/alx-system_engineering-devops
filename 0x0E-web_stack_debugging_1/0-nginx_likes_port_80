@@ -1,0 +1,5 @@
+#!/usr/bin/env
+# removing the bug(interference) and restarting nginx
+rm /etc/nginx/sites-enabled/default
+ln -n /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
