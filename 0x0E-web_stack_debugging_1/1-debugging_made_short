@@ -2,4 +2,4 @@
 # listening on port 80 without having an official running process
 ln -fs /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx start
-kill -15 $(pgrep nginx | head -1 )
+kill -15 "$( pgrep nginx | head -1 )"
