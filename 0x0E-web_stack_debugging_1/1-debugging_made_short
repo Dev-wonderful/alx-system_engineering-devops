@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # listening on port 80 without having an official running process
-sed -i 's/sites-enabled/sites-available/g' /etc/nginx/nginx.conf
+ln -fs /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx start
 kill -15 $(pgrep nginx | head -1 )
