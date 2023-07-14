@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# output formatted dig result of a domain and all subdomains or a specified sub-domain
+if [[ $# -eq 0 ]]; then
+	echo '[USAGE]: 0-world_wide_web <domain-name> <sub-domain>';
+	exit 1
+fi
+
+get_record () {
+	# get the record and ip of a sub-domain or all subdomains
+
+	# get the record type from IN in the dig output
+	record=$(dig "$1.$2" | grep "IN" -m 1 | awk '{print $3}')
+	ip=$(dig "$1.$2" | grep "IN" -m2 | tail -1 | awk '{print $5}')
+	echo "The subdomain $1 is a $record record and points to $ip";
+}
+
+if [[ $# -eq 1 ]]; then
+	get_record "www" "$1";
+	get_record "lb-01" "$1";
+	get_record "web-01" "$1";
+	get_record "web-02" "$1";
+fi
