@@ -19,4 +19,6 @@ if [[ $# -eq 1 ]]; then
 	get_record "lb-01" "$1";
 	get_record "web-01" "$1";
 	get_record "web-02" "$1";
+elif [[ -n $2 ]]; then
+	get_record "$2" "$1"
 fi
