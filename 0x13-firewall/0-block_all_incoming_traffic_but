@@ -1,0 +1,3 @@
+sudo ufw allow http
+sudo ufw allow https
+sudo ufw allow ssh
