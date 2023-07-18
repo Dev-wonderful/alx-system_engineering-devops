@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# creating a mysql dump for backup and archiving it with date as name
+ZIP_FILE=(date +%d-%m-%Y)
+EXT='tar.gz'
+mysqldump -u root -p "$1" --all-databases > backup.sql
+tar -czf "$ZIP_FILE.$EXT" backup.sql
