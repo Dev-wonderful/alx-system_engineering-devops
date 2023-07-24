@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     # writing to file
     with open(filename, 'w', encoding='UTF8', newline='') as file:
-        writer = csv.writer(file)
+        writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in todos:
             task_completed_status = task.get('completed')
             task_title = task.get('title')

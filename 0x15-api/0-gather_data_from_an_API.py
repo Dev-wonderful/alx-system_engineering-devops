@@ -21,7 +21,7 @@ if __name__ == '__main__':
             completed += 1
             completed_titles.append(task.get('title'))
     total_tasks = len(todos.json())
-    print('Employee {} is done with ({}/{}):'.format(employee_name,
+    print('Employee {} is done with tasks({}/{}):'.format(employee_name,
                                                      completed, total_tasks))
     for title in completed_titles:
         print('\t {}'.format(title))
