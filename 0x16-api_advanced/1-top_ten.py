@@ -14,7 +14,7 @@ def top_ten(subreddit):
     params = {
         'limit': 10
     }
-    url = 'https://www.reddit.com/r/{}/top.json'.format(subreddit)
+    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     result = requests.get(url, allow_redirects=False,
                           headers=header, params=params)
     top_posts = result.json().get('data', None)
