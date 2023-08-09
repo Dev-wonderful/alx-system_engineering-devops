@@ -22,6 +22,9 @@ def top_ten(subreddit):
         print(None)
         return
     posts = top_posts.get('children', None)
+    if len(posts) == 0:
+        print(None)
+        return
     for post in posts:
         title = post.get('data', None).get('title', None)
         print(title)
