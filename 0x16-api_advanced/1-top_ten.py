@@ -3,7 +3,7 @@
 import requests
 
 
-def top_ten(subreddit) -> int:
+def top_ten(subreddit):
     """returns the number of subs for a subreddit
     Args:
         subreddit(string): the fetch focus
