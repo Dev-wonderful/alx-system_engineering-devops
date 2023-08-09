@@ -15,7 +15,8 @@ def top_ten(subreddit):
     result = requests.get(url, allow_redirects=False, headers=header)
     top_posts = result.json().get('data', None)
     if top_posts is None:
-        return 0
+        print(None)
+        return
     posts = top_posts.get('children', None)
     for post in posts:
         title = post.get('data', None).get('title', None)
