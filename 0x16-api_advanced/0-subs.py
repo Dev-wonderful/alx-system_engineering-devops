@@ -8,8 +8,11 @@ def number_of_subscribers(subreddit) -> int:
     Args:
         subreddit(string): the fetch focus
     """
+    header = {
+        "User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+    }
     url = f'https://www.reddit.com/r/{subreddit}/about.json'
-    result = requests.get(url, allow_redirects=False)
+    result = requests.get(url, allow_redirects=False, headers=header)
     about = result.json().get('data', None)
     if about is None:
         return 0
