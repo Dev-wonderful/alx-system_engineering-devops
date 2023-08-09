@@ -9,10 +9,10 @@ def top_ten(subreddit):
         subreddit(string): the fetch focus
     """
     header = {
-        "User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+        'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
     }
     params = {
-        "limit": 10
+        'limit': 10
     }
     url = 'https://www.reddit.com/r/{}/top.json'.format(subreddit)
     result = requests.get(url, allow_redirects=False,
