@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# reload gunicorn server gracefully, to prevent downtime
+pgrep gunicorn |xargs kill -HUP
